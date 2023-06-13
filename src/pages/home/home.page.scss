@@ -1,7 +1,69 @@
 .cover-page {
+  position: relative;
   .cover-image {
     width: 100%; /* or any custom size */
     height: 100%;
     object-fit: contain;
+  }
+}
+.toolbar {
+  min-width: 100vw;
+  min-width: 100dvw;
+  width: 100%;
+  z-index: 999;
+  padding: 1rem;
+  background: #f3f3f3;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 1rem;
+  position: fixed;
+  top: 0;
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.6rem;
+  }
+  .sub-title {
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+}
+.content {
+  margin-top: 60px;
+  padding: 1rem;
+
+  .summary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    .object {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .objective {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+
+      h1 {
+        font-size: 3rem;
+        pointer-events: none;
+      }
+      p {
+        font-size: 2rem;
+        pointer-events: none;
+        text-align: start;
+        text-indent: 3rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .summary {
+    grid-template-columns: 1fr !important;
   }
 }
