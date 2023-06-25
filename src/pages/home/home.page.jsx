@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import './home.page.scss';
 import Masker from '../../components/masker/masker.component';
+import { ToolbarComponent } from '../../components/toolbar/toolbar.component';
 const HomePage = () => {
   useEffect(() => {
     handleImage();
@@ -29,34 +30,24 @@ const HomePage = () => {
 
   return (
     <div className='cover-page'>
-      {/* <img
-        className='cover-image'
-        src='/assets/images/landing.png'
-        alt=''
-        srcset=''
-      /> */}
-
-      <div className='toolbar'>
-        <div className='title'>SAYANAN</div>
-        <div className='sub-title'>Digital Artist</div>
-      </div>
+      <ToolbarComponent />
       <div className='content'>
         <div className='summary'>
           <div className='objective'>
             <h1>Hello !!</h1>
             <p>
-              I'm  <b>Ananda Sayanan</b> a talented 3D artist with a passion for creating stunning
-              visual experiences. Explore my portfolio and discover the world of
-              3D art.
+              I'm <b>Ananda Sayanan</b>, a talented 3D artist with a passion for
+              creating stunning visual experiences. Explore my portfolio and
+              discover the world of 3D art.
             </p>
           </div>
-       <div className="object">
-       <Masker
-            size={500}
-            background={'/assets/images/1-fore.png'}
-            foreground={'/assets/images/1-back.png'}
-          />
-       </div>
+          <div className='object'>
+            <Masker
+              size={500}
+              background={'/assets/images/1-fore.png'}
+              foreground={'/assets/images/1-back.png'}
+            />
+          </div>
         </div>
 
         {/* <div className='list'>
