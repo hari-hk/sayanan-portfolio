@@ -1,12 +1,14 @@
-import './App.scss';
+import { ThemeProvider } from '@mui/material';
 import HomePage from './pages/home/home.page';
-import { UnderConstructionPage } from './pages/under-construction/under-construction.page';
+import lightTheme from './theme/light'
+import './App.scss';
 
 function App() {
   return (
     <div className='main'>
-      <HomePage />
-      <UnderConstructionPage />
+      <ThemeProvider theme={lightTheme}>
+        <HomePage />
+      </ThemeProvider>
     </div>
   );
 }
